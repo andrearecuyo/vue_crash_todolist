@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <AddTodos v-on:add-todo="addTodo"/>
-    <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
+    <div class="appContent">
+      <AddTodos v-on:add-todo="addTodo"/>
+      <Todos v-bind:todos="todos" v-on:del-todo="deleteTodo"/>
+    </div>
   </div>
 </template>
 
@@ -75,12 +77,10 @@ export default {
   }
 
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Quicksand', sans-serif;
     color: #2c3e50;
   }
-  
+
   .btn {
     display: inline-block;
     border: none;
@@ -93,4 +93,5 @@ export default {
   .btn:hover {
     background-color:  #666;
   }
+
 </style>

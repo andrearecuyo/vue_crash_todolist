@@ -3,7 +3,7 @@
         <p>
             <input type="checkbox" v-on:change="markComplete">
             {{todo.title}}
-            <button @click="$emit('del-todo', todo.id)" class="del">x</button>
+            <button @click="$emit('del-todo', todo.id)" class="del">Delete</button>
         </p>
     </div>
 </template>
@@ -20,25 +20,37 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+
+    
     .todo-item {
-        background-color: #f4f4f4;
-        padding:10px;
-        border-bottom: 1px #ccc dotted;
+
+        background-color: #f7f7f7;
+        padding:20px;
+        border-bottom: 1px #e7e7e7 solid;
     }
 
     .is-complete {
         text-decoration: line-through;
+        color: #ff6e6e;
     }
 
     .del {
-        background-color: #ff0000;
+
+        background-color: #ff6e6e;
         color:#fff;
-        border:none;
+        border: 1px #ff6e6e solid;
         padding: 5px 10px;
-        border-radius:50%;
         cursor: pointer;
         float:right;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .del:hover{
+
+        background-color: transparent;
+        border: 1px #ff6e6e solid;
+        color: #2c3e50;
     }
 
 </style>

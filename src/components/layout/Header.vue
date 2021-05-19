@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <h1>
-            TodoList
+            Simple TodoList
         </h1>
         <div id="nav">
             <router-link to="/">Home</router-link> |
@@ -16,12 +16,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
     .header {
-        background-color: #333;
-        color: #fff;
+        background-color: #f7f7f7;
+        color: #2c3e50;
         text-align: center;
-        padding: 10px;
+        padding-top: 20px;
     }
     
     .header a {
